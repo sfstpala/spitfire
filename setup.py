@@ -47,9 +47,9 @@ EXT_MODULES = [Extension('spitfire.runtime._baked',
                          [os.path.join('spitfire', 'runtime', '_template.c')]),
                Extension('spitfire.runtime._udn',
                          [os.path.join('spitfire', 'runtime', '_udn.c')])]
-# Disable C extensions for PyPy.
-if platform.python_implementation() == 'PyPy':
-    EXT_MODULES = None
+
+# Disable C extensions
+EXT_MODULES = None
 
 setup(name=NAME,
       description=DESCRIPTION,
